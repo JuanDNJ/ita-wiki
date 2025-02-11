@@ -1,0 +1,43 @@
+.nav {
+  position: fixed;
+  z-index: 50;
+  background: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100vw);
+  transition: transform 300ms ease-in-out;
+  grid-area: aside;
+}
+
+.show {
+  transform: translateX(0vw);
+  transition: transform 300ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    position: initial;
+    z-index: initial;
+    background: snow;
+    width: auto;
+    height: auto;
+    top: initial;
+    left: initial;
+    transition: transform 300ms ease-in-out;
+    grid-area: aside;
+  }
+
+  .show_desktop {
+    position: initial;
+    z-index: initial;
+    background: snow;
+    width: auto;
+    height: auto;
+    top: initial;
+    left: initial;
+    transition: transform 300ms ease-in-out;
+    grid-area: aside;
+  }
+}

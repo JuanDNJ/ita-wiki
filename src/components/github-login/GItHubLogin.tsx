@@ -1,11 +1,8 @@
 import { FC } from 'react'
-import githubloginCSS from './css/githublogin.module.css'
-
-
 const GItHubLogin: FC<{ onClick?: () => void }> = ({ onClick }) => {
 
   return (
-    <button onClick={onClick} className={githubloginCSS.github} >
+    <button onClick={onClick} className="text-xl bg-black text-white inline-flex gap-4 p-4 items-center justify-center rounded-md" >
       <i>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.5rem" height="1.5rem">
           <path

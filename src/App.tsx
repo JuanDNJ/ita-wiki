@@ -1,122 +1,53 @@
 import { FC } from 'react'
-import './App.css'
-import GItHubLogin from './components/github-login/GItHubLogin'
-import folder from "./assets/new-folder-dynamic-color.svg";
-import puzzle from "./assets/puzzle-dynamic-color.svg";
-import ok from "./assets/thumb-up-dynamic-color.svg";
-import menu from "./assets/Vector-7.svg";
-import node from "./assets/logo-node 1.svg";
-import react from "./assets/react.svg";
-import angular from "./assets/angular.svg";
-import javascript from "./assets/javascript.svg";
-import java from "./assets/logo-java 1.svg";
-import php from "./assets/logo-php 1.svg";
-import dataScience from "./assets/data-science.svg";
-import bbdd from "./assets/logo-bbdd 1.svg";
-import close from "./assets/close.svg";
+import { Navigation } from './components/navigation/Navigation';
+import { Welcome } from './components/welcome/Welcome';
+import { Features } from './components/features/Features';
+import { Layout } from './layouts/Layout';
+import { Main } from './layouts/Main';
+import { Aside } from './layouts/Aside';
+import { Content } from './layouts/Content';
+import { MainHeader } from './layouts/MainHeader';
+
 
 const App: FC = () => {
-  const handlerClick = () => { }
+
   return (
-    <>
-      <header>
-        <button type="button">
-          <img src={menu} alt="menu" width={29} height={19.36} />
-        </button>
-        <select>
-          <option>ES</option>
-          <option>EN</option>
-        </select>
-        <nav>
-          <button className="open__menu" type="button">
-            <img src={close} alt="close" width={29} height={19.36} />
-          </button>
-          <ul>
-            <li>
-              <i><img src={node} alt="Node" width={29} height={19.36} /></i>
-              <span>Node</span>
-            </li>
-            <li>
-              <i><img src={react} alt="React" width={29} height={19.36} /></i>
-              <span>React</span>
-            </li>
-            <li>
-              <i><img src={angular} alt="Angular" width={29} height={19.36} /></i>
-              <span>Angular</span>
-            </li>
-            <li>
-              <i><img src={javascript} alt="Javascript" width={29} height={19.36} /></i>
-              <span>Javascript</span>
-            </li>
-            <li>
-              <i><img src={java} alt="Java" width={29} height={19.36} /></i>
-              <span>Java</span>
-            </li>
-            <li>
-              <i><img src={php} alt="Fullstack PHP" width={29} height={19.36} /></i>
-              <span>Fullstack PHP</span>
-            </li>
-            <li>
-              <i><img src={dataScience} alt="Data Science" width={29} height={19.36} /></i>
-              <span>Data Science</span>
-            </li>
-            <li>
-              <i><img src={bbdd} alt="BBDD" width={29} height={19.36} /></i>
-              <span>BBDD</span>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <aside>listado techs</aside>
-        <section >
-          <article style={{
-            display: 'flex',
-            flexDirection: 'column',
-            maxWidth: '320px',
-            padding: '1rem'
-          }}>
-            <h1>¡Bienvenid@ a la wiki de la IT Academy!</h1>
-            <p>Registrate o haz login para poder subir y votar recursos</p>
-            <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              maxWidth: '320px'
-            }}>
-              <GItHubLogin onClick={handlerClick} />
-              <label htmlFor="terms">
-                <input name="terms" type="checkbox" /> Acepto términos legales
-              </label>
-            </div>
-          </article>
-          <div>
-            <div>
-              <h2>Funcionalidades básicas que te ofrece esta plataforma:</h2>
-              <section>
-                <div>
-                  <span>/1</span>
-                  <img src={folder} alt="folder" width={100} height={100} />
-                  <h3>Guarda tus recursos favoritos</h3>
-                  <p>Ten tus recursos bien organizados</p>
-                </div>
-                <div>
-                  <span>/2</span>
-                  <img src={puzzle} alt="puzzle" width={100} height={100} />
-                  <h3>Colabora con tus compañer@s</h3>
-                  <p>Recursos compartidos</p>
-                </div>
-                <div>
-                  <span>/3</span>
-                  <img src={ok} alt="ok" width={100} height={100} />
-                  <h3>Vota los recursos</h3>
-                  <p>La comunidad decide cuáles son más relevantes</p>
-                </div>
-              </section>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
+    <Layout>
+      <MainHeader />
+      <Main>
+        <Aside>
+          <Navigation />
+        </Aside>
+        <Content>
+          <Welcome />
+          <Features />
+          <section className='p-8 flex flex-col gap-2 min-h-[50svh]'>
+            <p className='py-4 text-xl text-center'>
+              Veniam cillum nisi consectetur Lorem id elit reprehenderit proident.
+            </p>
+            <p className='py-4 text-xl text-center'>
+              Reprehenderit sit labore pariatur Lorem velit id labore reprehenderit ullamco ad veniam consectetur. Cillum ea ea aliqua ipsum sit. Laborum irure et laborum nisi labore velit veniam mollit cupidatat non fugiat. Nulla et cillum ut consectetur aliqua sit consequat. In aliquip irure incididunt nostrud ut deserunt do dolor voluptate velit fugiat. Ullamco culpa duis in incididunt. In commodo nostrud consequat aliquip officia sit dolore non deserunt culpa consectetur elit.
+            </p>
+          </section>
+          <section className='p-8 flex flex-col gap-2 min-h-[50svh]'>
+            <p className='py-4 text-xl text-center'>
+              Veniam cillum nisi consectetur Lorem id elit reprehenderit proident.
+            </p>
+            <p className='py-4 text-xl text-center'>
+              Reprehenderit sit labore pariatur Lorem velit id labore reprehenderit ullamco ad veniam consectetur. Cillum ea ea aliqua ipsum sit. Laborum irure et laborum nisi labore velit veniam mollit cupidatat non fugiat. Nulla et cillum ut consectetur aliqua sit consequat. In aliquip irure incididunt nostrud ut deserunt do dolor voluptate velit fugiat. Ullamco culpa duis in incididunt. In commodo nostrud consequat aliquip officia sit dolore non deserunt culpa consectetur elit.
+            </p>
+          </section>
+          <section className='p-8 flex flex-col gap-2 min-h-[50svh]'>
+            <p className='py-4 text-xl text-center'>
+              Veniam cillum nisi consectetur Lorem id elit reprehenderit proident.
+            </p>
+            <p className='py-4 text-xl text-center'>
+              Reprehenderit sit labore pariatur Lorem velit id labore reprehenderit ullamco ad veniam consectetur. Cillum ea ea aliqua ipsum sit. Laborum irure et laborum nisi labore velit veniam mollit cupidatat non fugiat. Nulla et cillum ut consectetur aliqua sit consequat. In aliquip irure incididunt nostrud ut deserunt do dolor voluptate velit fugiat. Ullamco culpa duis in incididunt. In commodo nostrud consequat aliquip officia sit dolore non deserunt culpa consectetur elit.
+            </p>
+          </section>
+        </Content>
+      </Main>
+    </Layout>
   )
 }
 
