@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 export const useMobile = () => {
-  const [isTablet, setTablet] = useState<boolean>(window.innerWidth < 896)
+  const [isTablet, setTablet] = useState<boolean>(window.innerWidth < 840)
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768)
 
   useEffect(() => {

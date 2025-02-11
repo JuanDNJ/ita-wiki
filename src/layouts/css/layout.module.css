@@ -7,6 +7,7 @@
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   height: 100svh;
+
 }
 
 .header {
@@ -22,6 +23,7 @@
   display: grid;
   grid-template-areas: "aside content";
   grid-template-columns: auto 1fr;
+
 }
 
 .aside {
@@ -34,12 +36,14 @@
   grid-area: content;
   display: flex;
   flex-direction: column;
+
   height: 768px;
   overflow-x: clip;
   overflow-y: scroll;
+
 }
 
-@media screen and (width<1024px) {
+@media screen and (width<840px) {
   .layout {
     height: initial;
   }
@@ -53,3 +57,5 @@
     height: auto;
   }
 }
+
+@media screen and (width<1024px) {}

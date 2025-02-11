@@ -6,7 +6,7 @@ interface Props {
 
 export const Feature: FC<Props> = ({ children }) => {
   return (
-    <article className="w-[279px] h-[327px] bg-[#f0f0f0] flex flex-col gap-4 items-center rounded-xl">
+    <article className="bg-[#f0f0f0] h-full max-h-96 flex flex-col items-center rounded-xl gap-8 ">
       {children}
     </article>
   )
